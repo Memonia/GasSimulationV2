@@ -1,0 +1,8 @@
+{
+  "particle": "#FFFFFF",
+  "tracked_particle": "#FF0000",
+  "slowest_particle": "#FF8C00",
+  "fastest_particle": "#7FFFD4",
+  "trajectory_line": "#00FFFF",
+  "velocity_vector": "#FFFFFF"
+}

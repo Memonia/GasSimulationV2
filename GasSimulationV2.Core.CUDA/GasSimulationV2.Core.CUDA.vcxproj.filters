@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CudaCompile Include="collision_detection.cu">
+      <Filter>Source</Filter>
+    </CudaCompile>
+    <CudaCompile Include="kernels.cu">
+      <Filter>Source</Filter>
+    </CudaCompile>
+    <CudaCompile Include="structures.cu">
+      <Filter>Source</Filter>
+    </CudaCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="simulation.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="collision_resolution.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="export.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="simulation.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="structures.cuh">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="cuda_macros.cuh">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="collisions.cuh">
+      <Filter>Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{e162e785-7b32-4895-ba02-534b7d3f0f61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{e28ac808-20e3-4f73-b288-76b3d90fac9e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
