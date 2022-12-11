@@ -35,7 +35,7 @@ namespace GasSimulationV2.Core.Benchmarks
 			[Params(16, 64, 128, 512, 1024, Priority = 1)]
 			public int ParticleAmount;
 
-			[GlobalSetup(Target = nameof(GPUSimulation))]
+			[IterationSetup(Target = nameof(GPUSimulation))]
 			public void ResetGPUSimulator()
 			{
 				_gpuSimulator.Reset();
@@ -44,7 +44,7 @@ namespace GasSimulationV2.Core.Benchmarks
 				);
 			}
 
-			[GlobalSetup(Target = nameof(CPUSimulation))]
+			[IterationSetup(Target = nameof(CPUSimulation))]
 			public void ResetCPUSimulator()
 			{
 				_cpuSimulator.Reset();
