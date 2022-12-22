@@ -129,17 +129,15 @@ void Simulator::StartSimulation()
 {
 	_simulationThread = std::jthread([this](std::stop_token token)
 	{
-		while (true)
+		while (!token.stop_requested())
 		{
-			if (token.stop_requested())
-				break;
-
-			_simulate(token);
 			if (_commitQueue.unsafe_size() >= _queueSize)
 			{
 				std::unique_lock lk(_queueMutex);
 				_queueCondVar.wait(lk);
 			}
+
+			_simulate(token);
 		}
 	});
 }

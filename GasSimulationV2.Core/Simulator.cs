@@ -109,19 +109,16 @@ namespace GasSimulationV2.Core
 		{
 			void _threadBody()
 			{
-				while (true)
+				while (!_forceStop && !token.IsCancellationRequested)
 				{
 					if (_commitQueue.Count >= _queueSize)
 						_pauseUpdating();
-					_waitForSpace();
 
+					_waitForSpace();
 					_simulate(token);
-					if (_forceStop || token.IsCancellationRequested)
-					{
-						_isRunning = false;
-						break;
-					}
 				}
+
+				_isRunning = false;
 			}
 
 			if (_isRunning)
