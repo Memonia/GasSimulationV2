@@ -198,6 +198,9 @@ namespace GasSimulationV2.Core
 				{
 					_forceStop = true;
 					_resumeUpdating();
+
+					// Wait for simulation to finish to free resources
+					SpinJoin();
 					_waitHandle.Close();
 				}
 

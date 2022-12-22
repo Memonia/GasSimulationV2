@@ -216,6 +216,8 @@ namespace GasSimulationV2.Core.Native
                 }
 
                 stopSimulation(_simulatorHandle);
+
+				SpinJoin();
                 if (!_wasReset)
                     _freeNativeResources();
 
