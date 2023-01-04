@@ -12,7 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GasSimulationV2.Core.Interface\GasSimulationV2.Core.Interface.csproj" />
     <ProjectReference Include="..\GasSimulationV2.Core\GasSimulationV2.Core.csproj" />
     <ProjectReference Include="..\GasSimulationV2.Utils\GasSimulationV2.Utils.csproj" />
   </ItemGroup>
